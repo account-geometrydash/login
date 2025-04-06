@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Terms of Service Update</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(#001f3f, #000000);
+      color: #fff;
+      font-family: 'Press Start 2P', cursive;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .box {
+      background-color: #003366;
+      border: 8px solid #FFD700;
+      border-radius: 20px;
+      padding: 30px;
+      width: 700px;
+      text-align: center;
+      box-shadow: 0 0 25px #FFD700;
+      animation: pulse 2s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from {
+        box-shadow: 0 0 10px #FFD700;
+      }
+      to {
+        box-shadow: 0 0 30px #FFD700;
+      }
+    }
+
+    h1 {
+      color: #FFD700;
+      font-size: 20px;
+      margin-bottom: 25px;
+      text-shadow: 2px 2px #000;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #fff;
+      margin: 15px 0;
+      text-shadow: 1px 1px #000;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      margin: 15px 10px;
+      font-size: 14px;
+      color: #000;
+      background-color: #FFD700;
+      border: 4px solid #fff;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.2s;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #fff700;
+      transform: scale(1.05);
+    }
+
+    .btn-secondary {
+      background-color: #00BFFF;
+      color: #fff;
+      border: 4px solid #fff;
+    }
+
+    .btn-secondary:hover {
+      background-color: #1E90FF;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>NEW TERMS OF SERVICE</h1>
+    <p>Hey there! We’ve updated our Terms of Service.</p>
+    <p>To continue playing Geometry Dash, you must review and accept the new terms.</p>
+    <div>
+      <a class="btn-secondary btn" href="https://www.robtopgames.com/tos.html" target="_blank">VIEW TERMS</a>
+      <a class="btn" href="#" onclick="acceptTerms()">ACCEPT</a>
+    </div>
+  </div>
+
+  <script>
+    function acceptTerms() {
+      alert("Thank you! You have accepted the new Terms of Service.");
+      document.cookie = "acceptedTerms=true; max-age=" + 365*24*60*60 + "; path=/";
+      window.location.href = "google.com"; // replace with your game page
+    }
+  </script>
+</body>
+</html>
